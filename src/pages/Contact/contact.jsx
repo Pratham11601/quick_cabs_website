@@ -4,7 +4,7 @@ import useOnScreen from '../../components/common/useOnScreen';
 import { BiPhoneCall } from "react-icons/bi";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { GoLocation } from "react-icons/go";
-import image from '../../assets/contact.jpg';
+import image from '../../assets/img7.jpg';
 import { useForm, ValidationError } from '@formspree/react';
 
 const ContactUs = () => {
@@ -72,12 +72,12 @@ const ContactUs = () => {
                                         />
                                       
                                         <motion.div
-                                            className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg relative flex flex-wrap py-6 rounded-xl shadow-2xl opacity-80 animate-fade-in-top hover:shadow-xl hover:scale-105 transition-transform duration-300"
+                                            className="bg-primary bg-opacity-50 backdrop-filter backdrop-blur-lg relative flex flex-wrap py-6 rounded-xl shadow-2xl opacity-80 animate-fade-in-top hover:shadow-xl hover:scale-105 transition-transform duration-300"
                                             whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)" }}
                                         >
                                             <div className="lg:w-1/2 px-6">
                                                 <motion.h2
-                                                    className="title-font font-extrabold text-white tracking-widest text-sm"
+                                                    className="title-font font-extrabold text-black tracking-widest text-sm"
                                                     initial={{ opacity: 0 }}
                                                     animate={{ opacity: 1 }}
                                                     transition={{ delay: 0.5, duration: 0.5 }}
@@ -85,7 +85,7 @@ const ContactUs = () => {
                                                     ADDRESS
                                                 </motion.h2>
                                                 <motion.p
-                                                    className="mt-1 text-white"
+                                                    className="mt-1 text-black"
                                                     initial={{ opacity: 0 }}
                                                     animate={{ opacity: 1 }}
                                                     transition={{ delay: 0.7, duration: 0.5 }}
@@ -95,16 +95,16 @@ const ContactUs = () => {
                                             </div>
                                             <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
                                                 <motion.h2
-                                                    className="title-font font-extrabold text-white tracking-widest text-sm"
+                                                    className="title-font font-extrabold text-black tracking-widest text-sm"
                                                     initial={{ opacity: 0 }}
                                                     animate={{ opacity: 1 }}
                                                     transition={{ delay: 0.5, duration: 0.5 }}
                                                 >
                                                     EMAIL
                                                 </motion.h2>
-                                                <a className="text-white leading-relaxed">hr.syncsolutions@gmail.com</a>
+                                                <a className="text-black leading-relaxed">hr.syncsolutions@gmail.com</a>
                                                 <motion.h2
-                                                    className="title-font font-extrabold text-white tracking-widest text-sm mt-4"
+                                                    className="title-font font-extrabold text-black tracking-widest text-sm mt-4"
                                                     initial={{ opacity: 0 }}
                                                     animate={{ opacity: 1 }}
                                                     transition={{ delay: 0.7, duration: 0.5 }}
@@ -112,7 +112,7 @@ const ContactUs = () => {
                                                     PHONE
                                                 </motion.h2>
                                                 <motion.p
-                                                    className="leading-relaxed text-white"
+                                                    className="leading-relaxed text-black"
                                                     initial={{ opacity: 0 }}
                                                     animate={{ opacity: 1 }}
                                                     transition={{ delay: 0.9, duration: 0.5 }}

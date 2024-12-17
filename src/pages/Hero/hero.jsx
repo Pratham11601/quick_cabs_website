@@ -114,7 +114,7 @@ const Hero = () => {
       <p>Enable your customers to easily book appointments based on your schedule.</p>
     </div>
     {/* Feature 4: Payments */}
-    <div className="group p-6 bg-[#0c0c24] text-white rounded-lg transform hover:scale-105 hover:animate-rotateIn hover:animate-pulse transition-all duration-300">
+    <div className="group p-6 bg-[#0c0c24] text-white rounded-lg transform hover:scale-105 hover:animate-bounceIn hover:animate-zoomIn transition-all duration-300">
       <h3 className="text-pink-400 text-lg font-bold mb-2">💳 PAYMENTS</h3>
       <p>Take deposits at booking and offer a seamless checkout experience.</p>
     </div>
@@ -134,7 +134,7 @@ const Hero = () => {
       <p>Grow your business by sending mass messages like promotions and rebooking reminders.</p>
     </div>
     {/* Feature 8: Reports */}
-    <div className="group p-6 bg-[#0c0c24] text-white rounded-lg transform hover:scale-105 hover:animate-rotateIn hover:animate-pulse transition-all duration-300">
+    <div className="group p-6 bg-[#0c0c24] text-white rounded-lg transform hover:scale-105 hover:animate-bounceIn hover:animate-zoomIn transition-all duration-300">
       <h3 className="text-pink-400 text-lg font-bold mb-2">📊 REPORTS</h3>
       <p>Review your business performance to simplify taxes and identify new ways to grow.</p>
     </div>
