@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";  
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -6,7 +7,10 @@ import "aos/dist/aos.css";
 import Navbar from "./components/Navbar/navbar";
 import Hero from "./pages/Hero/hero";
 import Contact from "./pages/Contact/contact";
+import ContactUs from "./pages/Contact/ContactUs";
+import AboutUs from "./pages/About/AboutUs";
 import Footer from "./components/Footer/footer";
+
 
 const App = () => {
   useEffect(() => {
@@ -20,12 +24,23 @@ const App = () => {
   }, []);
 
   return (
+    <Router>
     <div className="bg-white text-black overflow-x-hidden">
-      <Navbar />
-      <Hero />
-      <Contact />
-      <Footer />
+    <Routes> 
+          <Route path="/contactus" element={<ContactUs />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/" element={(
+          <>
+            <Navbar />
+            <Hero />
+            <Contact />
+            {/* <ContactUs /> */}
+            <Footer />
+          </>
+           )} /> 
+      </Routes>
     </div>
+    </Router>
   );
 };
 
