@@ -146,6 +146,9 @@ import {
   FaLinkedin,
   FaLocationArrow,
   FaMobileAlt,
+  FaGooglePlay,
+  FaApple
+
 } from "react-icons/fa";
 
 const FooterLinks = [
@@ -160,6 +163,10 @@ const FooterLinks = [
   {
     title: "Contact",
     link: "/contactus",
+  },
+  {
+    title: "QR Code",
+    link: "/share",
   },
   {
     title: "Blog",
@@ -263,11 +270,37 @@ const Footer = () => {
                     </li>
                   ))}
                 </ul>
+
+                <div className="mt-8">
+             <h3 className="text-lg font-semibold mb-4">Download on mobile</h3>
+               <div className="space-y-3">
+                 <a
+                   href="#"
+                   className="flex items-center gap-2 text-gray-500 hover:text-primary"
+                 >
+                   <FaGooglePlay className="text-2xl" />
+                   <span>Google Play</span>
+                 </a>
+                 <a
+                   href="#"
+                   className="flex items-center gap-2 text-gray-500 hover:text-primary"
+                 >
+                   <FaApple className="text-2xl" />
+                   <span>App Store</span>
+                 </a>
+               </div>
+             </div>
               </div>
             </div>
+
+
+            
+
           </div>
         </div>
       </section>
+
+         
 
       <div className="footer bg-gray-200 py-4 w-full">
         <div className="max-w-screen-xl mx-auto px-4 text-center">
@@ -290,3 +323,173 @@ const Footer = () => {
 };
 
 export default Footer;
+
+
+
+
+
+// import React from "react";
+// import { Link } from "react-router-dom";
+// import {
+//   FaFacebook,
+//   FaInstagram,
+//   FaLinkedin,
+//   FaLocationArrow,
+//   FaMobileAlt,
+//   FaGooglePlay,
+//   FaApple
+// } from "react-icons/fa";
+
+// const Features = [
+//   { title: "Appointments", link: "/appointments" },
+//   { title: "Reminders", link: "/reminders" },
+//   { title: "Online booking", link: "/booking" },
+//   { title: "Reports", link: "/reports" },
+//   { title: "Payments", link: "/payments" },
+//   { title: "Card readers", link: "/card-readers" },
+//   { title: "Calendar sync", link: "/calendar" },
+//   { title: "Client management", link: "/clients" },
+//   { title: "Centralized communication", link: "/communication" },
+//   { title: "Services", link: "/services" },
+//   { title: "Marketing", link: "/marketing" },
+//   { title: "Reserve with Google", link: "/google-reserve" }
+// ];
+
+// const Customers = [
+//   { title: "Acupuncturists", link: "/acupuncturists" },
+//   { title: "Auto detailers", link: "/auto-detailers" },
+//   { title: "Barbers", link: "/barbers" },
+//   { title: "Braiders & Locticians", link: "/braiders" },
+//   { title: "Bridal Shops", link: "/bridal" },
+//   { title: "Estheticians", link: "/estheticians" },
+//   { title: "Hairstylists", link: "/hairstylists" },
+//   { title: "Hair removal technicians", link: "/hair-removal" },
+//   { title: "Lash artists", link: "/lash-artists" },
+//   { title: "Makeup artists", link: "/makeup" },
+//   { title: "Massage therapists", link: "/massage" },
+//   { title: "Nail artists", link: "/nail-artists" }
+// ];
+
+// const GoldieLinks = [
+//   { title: "Pricing", link: "/pricing" },
+//   { title: "Referral program", link: "/referral" },
+//   { title: "Blog", link: "/blog" },
+//   { title: "Terms & conditions", link: "/terms" },
+//   { title: "Privacy policy", link: "/privacy" },
+//   { title: "Referral policy", link: "/referral-policy" }
+// ];
+
+// const Support = [
+//   { title: "Help center", link: "/help" },
+//   { title: "Getting started", link: "/getting-started" }
+// ];
+
+// const Footer = () => {
+//   return (
+//     <div className="bg-gray-900 text-white mt-14 rounded-t-3xl">
+//       <section className="container max-w-7xl mx-auto px-4">
+//         <div className="grid md:grid-cols-5 py-12 gap-8">
+//           {/* Features Column */}
+//           <div>
+//             <h2 className="text-xl font-bold mb-4">Features</h2>
+//             <ul className="space-y-2">
+//               {Features.map((item, index) => (
+//                 <li key={index}>
+//                   <Link
+//                     to={item.link}
+//                     className="text-gray-300 hover:text-white hover:translate-x-1 duration-300 block"
+//                   >
+//                     {item.title}
+//                   </Link>
+//                 </li>
+//               ))}
+//             </ul>
+//           </div>
+
+//           {/* Customers Column */}
+//           <div className="col-span-2">
+//             <h2 className="text-xl font-bold mb-4">Customers</h2>
+//             <div className="grid grid-cols-2 gap-2">
+//               {Customers.map((item, index) => (
+//                 <Link
+//                   key={index}
+//                   to={item.link}
+//                   className="text-gray-300 hover:text-white hover:translate-x-1 duration-300 block"
+//                 >
+//                   {item.title}
+//                 </Link>
+//               ))}
+//             </div>
+//           </div>
+
+//           {/* Goldie Column */}
+//           <div>
+//             <h2 className="text-xl font-bold mb-4">Goldie</h2>
+//             <ul className="space-y-2">
+//               {GoldieLinks.map((item, index) => (
+//                 <li key={index}>
+//                   <Link
+//                     to={item.link}
+//                     className="text-gray-300 hover:text-white hover:translate-x-1 duration-300 block"
+//                   >
+//                     {item.title}
+//                   </Link>
+//                 </li>
+//               ))}
+//             </ul>
+//           </div>
+
+//           {/* Support Column */}
+//           <div>
+//             <h2 className="text-xl font-bold mb-4">Support</h2>
+//             <ul className="space-y-2">
+//               {Support.map((item, index) => (
+//                 <li key={index}>
+//                   <Link
+//                     to={item.link}
+//                     className="text-gray-300 hover:text-white hover:translate-x-1 duration-300 block"
+//                   >
+//                     {item.title}
+//                   </Link>
+//                 </li>
+//               ))}
+//               <li>
+//                 <a href="mailto:support@heygoldie.com" className="text-gray-300 hover:text-white">
+//                   support@heygoldie.com
+//                 </a>
+//               </li>
+//             </ul>
+
+//             <div className="mt-8">
+//               <h3 className="text-lg font-semibold mb-4">Download on mobile</h3>
+//               <div className="space-y-3">
+//                 <a
+//                   href="#"
+//                   className="flex items-center gap-2 text-gray-300 hover:text-white"
+//                 >
+//                   <FaGooglePlay className="text-2xl" />
+//                   <span>Google Play</span>
+//                 </a>
+//                 <a
+//                   href="#"
+//                   className="flex items-center gap-2 text-gray-300 hover:text-white"
+//                 >
+//                   <FaApple className="text-2xl" />
+//                   <span>App Store</span>
+//                 </a>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+//       </section>
+
+//       <div className="border-t border-gray-800 py-4">
+//         <div className="container max-w-7xl mx-auto px-4 text-center text-gray-400">
+//           <p>&copy; {new Date().getFullYear()} Goldie. All rights reserved.</p>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Footer;
