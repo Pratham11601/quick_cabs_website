@@ -46,7 +46,7 @@ const ContactUs = () => {
   return (
     
     <section className={`py-4`} ref={ref}>
-          <Navbar />
+          {/* <Navbar /> */}
       <motion.div
         className={`mx-auto max-w-7xl px-4 sm:px-6 lg:px-8`}
         initial={{ opacity: 0, y: 50 }}
@@ -254,7 +254,7 @@ const ContactUs = () => {
 
         
       </motion.div>
-      <Footer />
+      {/* <Footer /> */}
     </section>
   );
 };
