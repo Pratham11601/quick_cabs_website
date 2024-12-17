@@ -4,7 +4,7 @@ import useOnScreen from '../../components/common/useOnScreen';
 import { BiPhoneCall } from "react-icons/bi";
 import { MdOutlineMailOutline } from "react-icons/md";
 import { GoLocation } from "react-icons/go";
-import image from '../../assets/book.jpg';
+import image from '../../assets/contact.jpg';
 import { useForm, ValidationError } from '@formspree/react';
 
 const ContactUs = () => {
