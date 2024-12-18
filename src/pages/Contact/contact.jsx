@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import useOnScreen from '../../components/common/useOnScreen';
-import { BiPhoneCall } from "react-icons/bi";
-import { MdOutlineMailOutline } from "react-icons/md";
-import { GoLocation } from "react-icons/go";
 import image from '../../assets/img7.jpg';
 import { useForm, ValidationError } from '@formspree/react';
 
@@ -57,7 +54,7 @@ const ContactUs = () => {
                                 animate={{ y: 0 }}
                                 transition={{ duration: 1 }}
                             >
-                                <div className="container px-5 py-16 mx-auto flex sm:flex-nowrap flex-wrap">
+                                <div className="container px-3 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
                                     <motion.div
                                         className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative"
                                         initial={{ scale: 0.9 }}
@@ -248,8 +245,6 @@ const ContactUs = () => {
                                 </div>
                             </motion.section>
                         </form>
-
-        
       </motion.div>
     </section>
   );
