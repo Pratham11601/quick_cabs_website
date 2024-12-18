@@ -39,13 +39,12 @@ import React from 'react';
 import { Twitter, Instagram, Linkedin, Facebook } from 'lucide-react';
 
 // Import required images
-import HRM from '../../assets/banner1.jpg';
+import HRM from '../../assets/contact1.jpg';
 import SyncBook from '../../assets/banner2.jpg';
 import ECommerce from '../../assets/banner3.jpg';
 import CRM from '../../assets/img3.jpg';
 import Analytics from '../../assets/img1.jpg';
 import POS from '../../assets/img7.jpg';
-// Import Carousel (assuming react-multi-carousel is used)
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 

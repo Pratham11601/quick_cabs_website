@@ -16,6 +16,11 @@ export const Navlinks = [
   },
   {
     id: 1,
+    name: "CATEGORIES",
+    link: "/categories",
+  },
+  {
+    id: 1,
     name: "INDUSTRIES",
     link: "/industries",
   },
@@ -44,7 +49,7 @@ const Navbar = ({ theme, setTheme }) => {
       <div className="container py-2 md:py-0">
         <div className="flex justify-between items-center">
           <div>
-            <span className="text-3xl font-bold font-serif">SyncBook-Mark-Web</span>
+            <span className="text-3xl font-bold font-serif">SyncBook</span>
           </div>
           <nav className="hidden md:block">
             <ul className="flex items-center gap-8">
