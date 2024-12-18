@@ -27,7 +27,7 @@ export const Navlinks = [
   {
     id: 1,
     name: "PRICING",
-    link: "/#",
+    link: "/pricing",
   },
 ];
 const Navbar = ({ theme, setTheme }) => {

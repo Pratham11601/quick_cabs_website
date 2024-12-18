@@ -67,6 +67,7 @@ import Services from "./pages/Services/services";
 import ShareQRCode from "./pages/Contact/ShareQRCode";
 import MyAppointments from "./pages/Services/MyAppointments";
 import BookAppointment from "./pages/Services/BookAppointment";
+import PricingSection from "./pages/Pricing/PricingSection";
 
 const App = () => {
   useEffect(() => {
@@ -97,6 +98,10 @@ const App = () => {
 
            {/* Route for Share QR page */}
            <Route path="/share" element={<ShareQRCode />} />
+
+             {/* Route for Share QR page */}
+             <Route path="/pricing" element={<PricingSection />} />
+
 
           {/* Route for BookAppointment page */}
           <Route path="/book-appointment" element={<BookAppointment />} />
