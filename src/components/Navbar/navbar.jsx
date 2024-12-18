@@ -17,7 +17,7 @@ export const Navlinks = [
   {
     id: 1,
     name: "INDUSTRIES",
-    link: "/#",
+    link: "/industries",
   },
   {
     id: 1,

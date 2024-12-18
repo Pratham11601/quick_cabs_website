@@ -65,6 +65,7 @@ import AboutUs from "./pages/About/AboutUs";
 import Footer from "./components/Footer/footer";
 import Services from "./pages/Services/services";
 import ShareQRCode from "./pages/Contact/ShareQRCode";
+import IndustriesSection from "./pages/Industries/IndustriesSection";
 import MyAppointments from "./pages/Services/MyAppointments";
 import BookAppointment from "./pages/Services/BookAppointment";
 import PricingSection from "./pages/Pricing/PricingSection";
@@ -102,6 +103,8 @@ const App = () => {
              {/* Route for Share QR page */}
              <Route path="/pricing" element={<PricingSection />} />
 
+ {/* Route for Share QR page */}
+ <Route path="/industries" element={<IndustriesSection />} />
 
           {/* Route for BookAppointment page */}
           <Route path="/book-appointment" element={<BookAppointment />} />
