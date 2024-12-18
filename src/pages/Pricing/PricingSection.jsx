@@ -355,7 +355,7 @@ const PricingSection = () => {
     <section className="bg-yellow-50 py-12 px-6 text-center">
       <h2 className="text-5xl font-bold text-gray-900 mb-4 animate__animated animate__fadeIn">Pricing</h2>
       <p className="text-gray-700 mb-8 text-lg animate__animated animate__fadeIn animate__delay-1s">
-        Goldie has affordable plans that fit your business.
+        SyncBook has affordable plans that fit your business.
       </p>
 
       {/* Billing Toggle */}
@@ -431,7 +431,7 @@ const PricingSection = () => {
 
           <div className="max-w-2xl">
             <p className="text-xl md:text-2xl text-gray-900">
-              Download the app and start booking for free with Goldie today
+              Download the app and start booking for free with SyncBook today
             </p>
           </div>
 

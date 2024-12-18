@@ -39,8 +39,8 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "Do I need to pay for Goldie?",
-      answer: "Goldie offers both free and premium plans. You can start with our free plan and upgrade anytime for additional features."
+      question: "Do I need to pay for SyncBook?",
+      answer: "SyncBook offers both free and premium plans. You can start with our free plan and upgrade anytime for additional features."
     },
     {
       question: "Can I pay yearly instead of monthly?",
