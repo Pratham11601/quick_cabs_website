@@ -71,7 +71,7 @@ import BookAppointment from "./pages/Services/BookAppointment";
 import PricingSection from "./pages/Pricing/PricingSection";
 import TermsConditions from './pages/TermsConditions'; 
 import PrivacyPolicy from './pages/PrivacyPolicy'; 
-
+import ServiceDetail from "./pages/Services/ServiseDetails";
 import MakeupArtist from "./pages/Categories/MakeupArtist"; 
 
 const App = () => {
@@ -100,6 +100,14 @@ const App = () => {
 
           {/* Route for Services page */}
           <Route path="/services" element={<Services />} />
+          <Route path="/services/haircut" element={<ServiceDetail />} />
+          <Route path="/services/nails" element={<ServiceDetail />} />
+          <Route path="/services/massage" element={<ServiceDetail />} />
+          <Route path="/services/facial" element={<ServiceDetail />} />
+          <Route path="/services/spa" element={<ServiceDetail />} />
+          <Route path="/services/coloring" element={<ServiceDetail />} />
+          <Route path="/services/makeup" element={<ServiceDetail />} />
+          <Route path="/services/waxing" element={<ServiceDetail />} />
 
            {/* Route for Share QR page */}
            <Route path="/share" element={<ShareQRCode />} />

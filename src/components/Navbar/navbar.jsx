@@ -177,7 +177,7 @@
 import React, { useState } from "react";
 import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
 import { IoIosArrowDown } from "react-icons/io";
-
+import { Link } from "react-router-dom";
 export const Navlinks = [
   {
     id: 1,
@@ -188,15 +188,159 @@ export const Navlinks = [
     id: 2,
     name: "SERVICES",
     subMenu: [
-      { name: "Haircut", link: "/services/haircut" },
-      { name: "Nails", link: "/services/nails" },
-      { name: "Massage", link: "/services/massage" },
-      { name: "Facial", link: "/services/facial" },
-      { name: "Spa", link: "/services/spa" },
-      { name: "Coloring", link: "/services/coloring" },
-      { name: "Makeup", link: "/services/makeup" },
-      { name: "Waxing", link: "/services/waxing" },
-    ],
+      {
+        name: "Haircut",
+        link: "/services/haircut",
+        images: {
+          first_img: "https://i.pinimg.com/736x/e4/01/3a/e4013a58101bf93ecd3051d72c4ca53c.jpg",
+          second_img: "https://i.pinimg.com/736x/e4/01/3a/e4013a58101bf93ecd3051d72c4ca53c.jpg",
+          third_img: "https://i.pinimg.com/736x/e4/01/3a/e4013a58101bf93ecd3051d72c4ca53c.jpg",
+          fourth_img: "https://i.pinimg.com/736x/e4/01/3a/e4013a58101bf93ecd3051d72c4ca53c.jpg"
+        },
+        icon: "✂️",
+        description: "Professional haircut services.",
+        features: [
+          "Precision cutting techniques",
+          "Styling for all hair types",
+          "Consultation included"
+        ],
+        targetAudience: "Men, Women, and Children",
+        recommendedProducts: ["Hair Gel", "Hair Spray"]
+      },
+      {
+        name: "Nails",
+        link: "/services/nails",
+        images: {
+          first_img: "https://i.pinimg.com/236x/0a/95/ab/0a95abb7f9cbc9bd62a18e9169122716.jpg",
+          second_img: "https://i.pinimg.com/236x/0a/95/ab/0a95abb7f9cbc9bd62a18e9169122716.jpg",
+          third_img: "https://i.pinimg.com/236x/0a/95/ab/0a95abb7f9cbc9bd62a18e9169122716.jpg",
+          fourth_img: "https://i.pinimg.com/236x/0a/95/ab/0a95abb7f9cbc9bd62a18e9169122716.jpg"
+        },
+        icon: "💅",
+        description: "Beautiful nail treatments.",
+        features: [
+          "Manicure and Pedicure options",
+          "Nail art and designs available",
+          "Organic products used"
+        ],
+        targetAudience: "All ages",
+        recommendedProducts: ["Nail Polish", "Cuticle Oil"]
+      },
+      {
+        name: "Massage",
+        link: "/services/massage",
+        images: {
+          first_img: "https://i.pinimg.com/736x/33/b8/8d/33b88d4dc486a54bad4df94ab98d7314.jpg",
+          second_img: "https://i.pinimg.com/736x/33/b8/8d/33b88d4dc486a54bad4df94ab98d7314.jpg",
+          third_img: "https://i.pinimg.com/736x/33/b8/8d/33b88d4dc486a54bad4df94ab98d7314.jpg",
+          fourth_img: "https://i.pinimg.com/736x/33/b8/8d/33b88d4dc486a54bad4df94ab98d7314.jpg"
+        },
+        icon: "💆",
+        description: "Relaxing massage therapies.",
+        features: [
+          "Swedish, Deep Tissue, and Aromatherapy options",
+          "Customized massage experience",
+          "Trained therapists"
+        ],
+        targetAudience: "Adults seeking relaxation and relief from stress",
+        recommendedProducts: ["Massage Oil", "Essential Oils"]
+      },
+      {
+        name: "Facial",
+        link: "/services/facial",
+        images: {
+          first_img: "https://i.pinimg.com/236x/2d/e2/a3/2de2a3940b7a271e9c19436185002b4d.jpg",
+          second_img: "https://i.pinimg.com/236x/2d/e2/a3/2de2a3940b7a271e9c19436185002b4d.jpg",
+          third_img: "https://i.pinimg.com/236x/2d/e2/a3/2de2a3940b7a271e9c19436185002b4d.jpg",
+          fourth_img: "https://i.pinimg.com/236x/2d/e2/a3/2de2a3940b7a271e9c19436185002b4d.jpg"
+        },
+        icon: "🧖",
+        description: "Rejuvenating facial treatments.",
+        features: [
+          "Cleansing and exfoliation",
+          "Hydrating masks tailored to skin type",
+          "Anti-aging treatments available"
+        ],
+        targetAudience: "Individuals looking to improve skin health",
+        recommendedProducts: ["Moisturizer", "Sunscreen"]
+      },
+      {
+        name: "Spa",
+        link: "/services/spa",
+        images: {
+          first_img: "https://i.pinimg.com/736x/a0/9d/47/a09d470c5451d4b4206e22a2813b0a58.jpg",
+          second_img: "https://i.pinimg.com/736x/a0/9d/47/a09d470c5451d4b4206e22a2813b0a58.jpg",
+          third_img: "https://i.pinimg.com/736x/a0/9d/47/a09d470c5451d4b4206e22a2813b0a58.jpg",
+          fourth_img: "https://i.pinimg.com/736x/a0/9d/47/a09d470c5451d4b4206e22a2813b0a58.jpg"
+        },
+        icon: "🛁",
+        description: "Luxurious spa experiences.",
+        features: [
+          "Full body treatments available",
+          "Relaxation areas with soothing ambiance",
+          "Package deals for couples"
+        ],
+        targetAudience: "Anyone seeking a luxurious escape",
+        recommendedProducts: ["Body Scrub", "Bath Salts"]
+      },
+      {
+        name: "Coloring",
+        link: "/services/coloring",
+        images: {
+          first_img: "https://i.pinimg.com/736x/43/b5/61/43b561f97b3c8fb5b5089b5185accaec.jpg",
+          second_img: "https://i.pinimg.com/736x/43/b5/61/43b561f97b3c8fb5b5089b5185accaec.jpg",
+          third_img: "https://i.pinimg.com/736x/43/b5/61/43b561f97b3c8fb5b5089b5185accaec.jpg",
+          fourth_img: "https://i.pinimg.com/736x/43/b5/61/43b561f97b3c8fb5b5089b5185accaec.jpg"
+        },
+        icon: "🎨",
+        description: "Vibrant hair coloring options.",
+        features: [
+          "Highlights, Balayage, and Ombre techniques available",
+          "Color matching consultation provided",
+          "Use of high-quality hair dyes"
+        ],
+        targetAudience: "Anyone looking to change their hair color dramatically or subtly",
+        recommendedProducts: ["Color Protect Shampoo", "Conditioner"]
+      },
+      {
+        name: "Makeup",
+        link: "/services/makeup",
+        images: {
+          first_img: "https://i.pinimg.com/736x/d8/b9/15/d8b9151584fb89c681d68cc973efeb9c.jpg",
+          second_img: "https://i.pinimg.com/736x/d8/b9/15/d8b9151584fb89c681d68cc973efeb9c.jpg",
+          third_img: "https://i.pinimg.com/736x/d8/b9/15/d8b9151584fb89c681d68cc973efeb9c.jpg",
+          fourth_img: "https://i.pinimg.com/736x/d8/b9/15/d8b9151584fb89c681d68cc973efeb9c.jpg"
+        },
+        icon: "💄",
+        description: "Professional makeup services.",
+        features: [
+          "Bridal and event makeup available",
+          "Customized looks based on client preferences",
+          "High-quality makeup products used"
+        ],
+        targetAudience: "Individuals preparing for special occasions or events",
+        recommendedProducts: ["Foundation", "Setting Spray"]
+      },
+      {
+        name: "Waxing",
+        link: "/services/waxing",
+        images: {
+          first_img: "https://i.pinimg.com/236x/d1/25/51/d1255148f0747db69b5c47bdb793c5eb.jpg",
+          second_img: "https://i.pinimg.com/236x/d1/25/51/d1255148f0747db69b5c47bdb793c5eb.jpg",
+          third_img: "https://i.pinimg.com/236x/d1/25/51/d1255148f0747db69b5c47bdb793c5eb.jpg",
+          fourth_img: "https://i.pinimg.com/236x/d1/25/51/d1255148f0747db69b5c47bdb793c5eb.jpg"
+        },
+        icon: "🕯️",
+        description: "Smooth waxing solutions.",
+        features: [
+          "Full body waxing options available",
+          "Gentle techniques to minimize discomfort",
+          "Post-wax care products offered"
+        ],
+        targetAudience: "Anyone seeking smooth skin without shaving hassle.",
+        recommendedProducts: ["After Wax Lotion", "Exfoliating Scrub"]
+      }
+    ]
   },
   {
     id: 3,
@@ -256,6 +400,7 @@ const Navbar = () => {
                   onMouseLeave={() => setDropdown(null)}
                 >
                   <a
+                    onClick={() => setDropdown(id)}
                     href={link || "#"}
                     className="text-lg font-medium flex items-center gap-2 text-black hover:text-primary transition-colors duration-300"
                   >
@@ -272,9 +417,11 @@ const Navbar = () => {
                             key={index}
                             className="px-4 py-2 hover:bg-gray-700 hover:text-white transition-colors duration-300"
                           >
-                            <a href={item.link} className="block transition-colors duration-300">
+                            <Link to={item.link} state={item}>
+                            <p className="block transition-colors duration-300">
                               {item.name}
-                            </a>
+                            </p>
+                            </Link>
                           </li>
                         ))}
                       </div>
@@ -284,9 +431,11 @@ const Navbar = () => {
                             key={index}
                             className="px-4 py-2 hover:bg-gray-700 hover:text-white transition-colors duration-300"
                           >
-                            <a href={item.link} className="block transition-colors duration-300">
+                            <Link to={item.link} state={item}>
+                            <p className="block transition-colors duration-300">
                               {item.name}
-                            </a>
+                            </p>
+                            </Link>
                           </li>
                         ))}
                       </div>
