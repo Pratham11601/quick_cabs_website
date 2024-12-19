@@ -19,11 +19,11 @@ export const Navlinks = [
     name: "CATEGORIES",
     link: "/categories",
   },
-  {
-    id: 1,
-    name: "INDUSTRIES",
-    link: "/industries",
-  },
+  // {
+  //   id: 1,
+  //   name: "INDUSTRIES",
+  //   link: "/industries",
+  // },
   {
     id: 1,
     name: "CONTACT",
