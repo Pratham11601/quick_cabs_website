@@ -69,6 +69,8 @@ import IndustriesSection from "./pages/Industries/IndustriesSection";
 import MyAppointments from "./pages/Services/MyAppointments";
 import BookAppointment from "./pages/Services/BookAppointment";
 import PricingSection from "./pages/Pricing/PricingSection";
+import TermsConditions from './pages/TermsConditions'; 
+import PrivacyPolicy from './pages/PrivacyPolicy'; 
 
 const App = () => {
   useEffect(() => {
@@ -102,6 +104,9 @@ const App = () => {
 
              {/* Route for Share QR page */}
              <Route path="/pricing" element={<PricingSection />} />
+
+             <Route path="/terms" element={<TermsConditions />} /> 
+             <Route path="/privacy" element={<PrivacyPolicy />} />
 
  {/* Route for Share QR page */}
  <Route path="/industries" element={<IndustriesSection />} />
