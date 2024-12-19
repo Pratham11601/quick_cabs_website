@@ -297,7 +297,7 @@ const ServiceCard = ({ service }) => (
         </div>
   
         <main className="container mx-auto p-6">
-          <section className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <section className="grid grid-cols-2 md:px-20 sm:px-10 lg:px-32 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {services.map((service) => (
               <ServiceCard key={service.title} service={service} />
             ))}
