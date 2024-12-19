@@ -291,10 +291,12 @@
 
 // export default PricingSection;
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import FAQItem from './FAQItem';
 
 const PricingSection = () => {
   const [billingOption, setBillingOption] = useState('Annually');
+  const navigate = useNavigate();
 
   // Pricing plans with separate features for Monthly and Annually
   const plans = [
@@ -435,7 +437,10 @@ const PricingSection = () => {
             </p>
           </div>
 
-          <button className="bg-rose-500 hover:bg-rose-600 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 ease-in-out">
+          <button
+            className="bg-rose-500 hover:bg-rose-600 text-white font-semibold px-8 py-3 rounded-full transition-all duration-300 ease-in-out"
+            onClick={() => navigate('/share')}
+          >
             Get started
           </button>
         </div>
