@@ -1,79 +1,214 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 
+// import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
+// import ResponsiveMenu from "./ResponsiveMenu";
+
+// export const Navlinks = [
+//   {
+//     id: 1,
+//     name: "HOME",
+//     link: "/#",
+//   },
+//   {
+//     id: 2,
+//     name: "SERVISES",
+//     link: "/services",
+//   },
+//   {
+//     id: 1,
+//     name: "CATEGORIES",
+//     link: "/categories",
+//   },
+//   // {
+//   //   id: 1,
+//   //   name: "INDUSTRIES",
+//   //   link: "/industries",
+//   // },
+//   {
+//     id: 1,
+//     name: "CONTACT",
+//     link: "/contactus",
+//   },
+//   {
+//     id: 1,
+//     name: "PRICING",
+//     link: "/pricing",
+//   },
+// ];
+// const Navbar = ({ theme, setTheme }) => {
+//   const [showMenu, setShowMenu] = useState(false);
+
+//   const toggleMenu = () => {
+//     setShowMenu(!showMenu);
+//   };
+//   return (
+//     <div
+//       className="relative z-10 shadow-md w-full dark:bg-black dark:text-white duration-300
+//     "
+//     >
+//       <div className="container py-2 md:py-0">
+//         <div className="flex justify-between items-center">
+//           <div>
+//             <span className="text-3xl font-bold font-serif">SyncBook</span>
+//           </div>
+//           <nav className="hidden md:block">
+//             <ul className="flex items-center gap-8">
+//               {Navlinks.map(({ id, name, link }) => (
+//                 <li key={id} className="py-4">
+//                   <a
+//                     href={link}
+//                     className=" text-lg font-medium  hover:text-primary py-2 hover:border-b-2 hover:border-primary transition-colors duration-500  "
+//                   >
+//                     {name}
+//                   </a>
+//                 </li>
+//               ))}
+             
+//             </ul>
+//           </nav>
+//           {/* Mobile view  */}
+//           <div className="flex items-center gap-4 md:hidden ">
+            
+//             {/* Mobile Hamburger icon */}
+//             {showMenu ? (
+//               <HiMenuAlt1
+//                 onClick={toggleMenu}
+//                 className=" cursor-pointer transition-all"
+//                 size={30}
+//               />
+//             ) : (
+//               <HiMenuAlt3
+//                 onClick={toggleMenu}
+//                 className="cursor-pointer transition-all"
+//                 size={30}
+//               />
+//             )}
+//           </div>
+//         </div>
+//       </div>
+//       <ResponsiveMenu showMenu={showMenu} />
+//     </div>
+//   );
+// };
+
+// export default Navbar;
+import React, { useState } from "react";
 import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
-import ResponsiveMenu from "./ResponsiveMenu";
+import { IoIosArrowDown } from "react-icons/io";
 
 export const Navlinks = [
   {
     id: 1,
     name: "HOME",
-    link: "/#",
+    link: "/",
   },
   {
     id: 2,
-    name: "SERVISES",
-    link: "/services",
+    name: "SERVICES",
+    subMenu: [
+      { name: "Haircut", link: "/services/haircut" },
+      { name: "Nails", link: "/services/nails" },
+      { name: "Massage", link: "/services/massage" },
+      { name: "Facial", link: "/services/facial" },
+      { name: "Spa", link: "/services/spa" },
+      { name: "Coloring", link: "/services/coloring" },
+      { name: "Makeup", link: "/services/makeup" },
+      { name: "Waxing", link: "/services/waxing" },
+    ],
   },
   {
-    id: 1,
+    id: 3,
     name: "CATEGORIES",
-    link: "/categories",
+    subMenu: [
+      { name: "Astrology", link: "/categories/astrology" },
+      { name: "Tarot card reader", link: "/categories/tarot-card-reader" },
+      { name: "Beautician", link: "/categories/beautician" },
+      { name: "Makeup artist", link: "/categories/makeup-artist" },
+      { name: "Mehendi artist", link: "/categories/mehendi-artist" },
+      { name: "Tattoo artist", link: "/categories/tattoo-artist" },
+      { name: "Hair salons", link: "/categories/hair-salons" },
+    ],
   },
-  // {
-  //   id: 1,
-  //   name: "INDUSTRIES",
-  //   link: "/industries",
-  // },
   {
-    id: 1,
+    id: 4,
     name: "CONTACT",
     link: "/contactus",
   },
   {
-    id: 1,
+    id: 5,
     name: "PRICING",
     link: "/pricing",
   },
 ];
-const Navbar = ({ theme, setTheme }) => {
+
+const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const [dropdown, setDropdown] = useState(null);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
+
+  const toggleDropdown = (id) => {
+    setDropdown(dropdown === id ? null : id);
+  };
+
   return (
-    <div
-      className="relative z-10 shadow-md w-full dark:bg-black dark:text-white duration-300
-    "
-    >
-      <div className="container py-2 md:py-0">
+    <div className="relative z-10 shadow-md w-full bg-white text-black">
+      <div className="container mx-auto py-2 px-4">
         <div className="flex justify-between items-center">
+          {/* Logo */}
           <div>
-            <span className="text-3xl font-bold font-serif">SyncBook</span>
+            <span className="text-3xl font-bold font-serif text-black hover:text-primary transition-colors duration-300">
+              SyncBook
+            </span>
           </div>
+          {/* Desktop Navigation */}
           <nav className="hidden md:block">
             <ul className="flex items-center gap-8">
-              {Navlinks.map(({ id, name, link }) => (
-                <li key={id} className="py-4">
+              {Navlinks.map(({ id, name, link, subMenu }) => (
+                <li
+                  key={id}
+                  className="relative group"
+                  onMouseEnter={() => setDropdown(id)}
+                  onMouseLeave={() => setDropdown(null)}
+                >
                   <a
-                    href={link}
-                    className=" text-lg font-medium  hover:text-primary py-2 hover:border-b-2 hover:border-primary transition-colors duration-500  "
+                    href={link || "#"}
+                    className="text-lg font-medium flex items-center gap-2 text-black hover:text-primary transition-colors duration-300"
                   >
                     {name}
+                    {subMenu && (
+                      <IoIosArrowDown className="text-gray-500 group-hover:text-primary transition-colors duration-300" />
+                    )}
                   </a>
+                  {subMenu && dropdown === id && (
+                    <ul className="absolute top-full left-0 bg-gray-800 text-gray-200 py-2 shadow-lg rounded-md w-48">
+                      {subMenu.map((item, index) => (
+                        <li
+                          key={index}
+                          className="px-4 py-2 hover:bg-gray-700 hover:text-white transition-colors duration-300"
+                        >
+                          <a
+                            href={item.link}
+                            className="block transition-colors duration-300"
+                          >
+                            {item.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
               ))}
-             
             </ul>
           </nav>
-          {/* Mobile view  */}
-          <div className="flex items-center gap-4 md:hidden ">
-            
-            {/* Mobile Hamburger icon */}
+          {/* Mobile Navigation */}
+          <div className="flex items-center gap-4 md:hidden">
             {showMenu ? (
               <HiMenuAlt1
                 onClick={toggleMenu}
-                className=" cursor-pointer transition-all"
+                className="cursor-pointer transition-all"
                 size={30}
               />
             ) : (
@@ -86,7 +221,47 @@ const Navbar = ({ theme, setTheme }) => {
           </div>
         </div>
       </div>
-      <ResponsiveMenu showMenu={showMenu} />
+      {/* Mobile Dropdown Menu */}
+      {showMenu && (
+        <div className="md:hidden bg-white shadow-md">
+          <ul className="flex flex-col gap-4 p-4">
+            {Navlinks.map(({ id, name, link, subMenu }) => (
+              <li key={id} className="relative">
+                <button
+                  onClick={() => toggleDropdown(id)}
+                  className="w-full text-left text-lg font-medium flex justify-between items-center text-black hover:text-primary transition-colors duration-300"
+                >
+                  {name}
+                  {subMenu && (
+                    <IoIosArrowDown
+                      className={`text-gray-500 transition-transform duration-300 ${
+                        dropdown === id ? "rotate-180" : "rotate-0"
+                      }`}
+                    />
+                  )}
+                </button>
+                {subMenu && dropdown === id && (
+                  <ul className="bg-gray-800 mt-2 rounded-md shadow-md">
+                    {subMenu.map((item, index) => (
+                      <li
+                        key={index}
+                        className="px-4 py-2 hover:bg-gray-700 hover:text-primary transition-colors duration-300"
+                      >
+                        <a
+                          href={item.link}
+                          className="block transition-colors duration-300"
+                        >
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 };
