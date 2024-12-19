@@ -70,6 +70,8 @@ import MyAppointments from "./pages/Services/MyAppointments";
 import BookAppointment from "./pages/Services/BookAppointment";
 import PricingSection from "./pages/Pricing/PricingSection";
 
+import MakeupArtist from "./pages/Categories/MakeupArtist"; 
+
 const App = () => {
   useEffect(() => {
     AOS.init({
@@ -111,6 +113,10 @@ const App = () => {
 
           {/* Route for MyAppointments page */}
           <Route path="/my-appointments" element={<MyAppointments />} />
+
+
+          <Route path="/categories/makeup-artist" element={<MakeupArtist />} />
+
 
           {/* Default Route */}
           <Route
