@@ -230,7 +230,7 @@ const GoldieLinks = [
   { title: "Blog", link: "/blog" },
   { title: "Terms & conditions", link: "/terms" },
   { title: "Privacy policy", link: "/privacy" },
-  { title: "Referral policy", link: "/referral-policy" }
+  { title: "About Us", link: "/aboutus" }
 ];
 
 const Support = [
