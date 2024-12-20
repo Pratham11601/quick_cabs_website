@@ -6,49 +6,43 @@ import {
   FaLinkedin,
   FaLocationArrow,
   FaMobileAlt,
+  FaEnvelope,
   FaGooglePlay,
   FaApple,
 } from "react-icons/fa";
 
 const Features = [
-  { title: "Appointments", link: "/appointments" },
-  { title: "Reports", link: "/reports" },
-  { title: "Payments", link: "/payments" },
-  { title: "Card readers", link: "/card-readers" },
-  { title: "Client management", link: "/clients" },
-  { title: "Centralized communication", link: "/communication" },
-  { title: "Services", link: "/services" },
-  { title: "Marketing", link: "/marketing" },
-  { title: "Reserve with Google", link: "/google-reserve" },
+  { title: "Astrology", link: "/categories/astrology" },
+  { title: "Tarot card reader", link: "/categories/tarot-card-reader" },
+  { title: "Beautician", link: "/categories/beautician" },
+  { title: "Makeup artist", link: "/categories/makeup-artist" },
+  { title: "Mehendi artist", link: "/categories/mehendi-artist" },
+  { title: "Tattoo artist", link: "/categories/tattoo-artist" },
+  { title: "Hair salons", link: "/categories/hair-salons" },
 ];
 
 const GoldieLinks = [
+  { title: "Home" , link: "/",},
+  { title: "About Us", link: "/aboutus" },
+  { title: "Contact Us", link: "/contactus" },
   { title: "Pricing", link: "/pricing" },
-  { title: "Referral program", link: "/referral" },
-  { title: "Blog", link: "/blog" },
   { title: "Terms & conditions", link: "/terms" },
   { title: "Privacy policy", link: "/privacy" },
-  { title: "About Us", link: "/aboutus" },
-];
-
-const Support = [
-  { title: "Help center", link: "/help" },
-  { title: "Getting started", link: "/#" },
 ];
 
 const Footer = () => {
   return (
     <div className="bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white mt-14 rounded-t-3xl">
       <section className="container max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-5 py-12 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 py-12 gap-8">
           {/* Company Details Section */}
           <div>
             <h1 className="sm:text-3xl text-xl font-bold mb-3 font-serif text-primary">
               SyncBook
             </h1>
             <p className="text-sm mb-4">
-              Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Possimus, voluptate.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus,
+              voluptate.
             </p>
             <div className="flex items-center gap-3 mb-3">
               <FaLocationArrow className="text-lg text-primary" />
@@ -57,6 +51,12 @@ const Footer = () => {
             <div className="flex items-center gap-3 mb-3">
               <FaMobileAlt className="text-lg text-primary" />
               <p>+91 123456789</p>
+            </div>
+            <div>
+              <FaEnvelope className="text-lg text-primary" />
+                <p><a href="mailto:support@heygoldie.com" className="text-gray-300 hover:text-white">
+                  support@SyncBook.com
+                </a></p>
             </div>
             <div className="flex items-center gap-4 mt-6">
               <a href="#" className="text-3xl hover:text-primary duration-300">
@@ -73,7 +73,7 @@ const Footer = () => {
 
           {/* Features Column */}
           <div>
-            <h2 className="text-xl font-bold mb-4">Features</h2>
+            <h2 className="text-xl font-bold mb-4">Categories</h2>
             <ul className="space-y-2">
               {Features.map((item, index) => (
                 <li key={index}>
@@ -88,9 +88,9 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Goldie Column */}
+          {/* Quick Links Column */}
           <div>
-            <h2 className="text-xl font-bold mb-4">SyncBook</h2>
+            <h2 className="text-xl font-bold mb-4">Quick Links</h2>
             <ul className="space-y-2">
               {GoldieLinks.map((item, index) => (
                 <li key={index}>
@@ -102,28 +102,6 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
-            </ul>
-          </div>
-
-          {/* Support Column */}
-          <div>
-            <h2 className="text-xl font-bold mb-4">Support</h2>
-            <ul className="space-y-2">
-              {Support.map((item, index) => (
-                <li key={index}>
-                  <Link
-                    to={item.link}
-                    className="text-gray-300 hover:text-white hover:translate-x-1 duration-300 block"
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
-              <li>
-                <a href="mailto:support@syncbook.com" className="text-gray-300 hover:text-white">
-                  support@SyncBook.com
-                </a>
-              </li>
             </ul>
           </div>
 
