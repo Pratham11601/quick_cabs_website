@@ -5,16 +5,16 @@ const FAQItem = ({ question, children, isOpen, onClick }) => (
   <div className="mb-4">
     <button
       onClick={onClick}
-      className="w-full bg-white rounded-xl p-6 flex justify-between items-center hover:bg-gray-50 transition-colors"
+      className="w-full bg-white rounded-xl p-4 md:p-6 flex justify-between items-center hover:bg-gray-50 transition-colors"
     >
-      <span className="text-xl text-left text-gray-900">{question}</span>
-      <Plus 
+      <span className="text-base md:text-xl text-left text-gray-900">{question}</span>
+      <Plus
         className={`flex-shrink-0 transition-transform ${isOpen ? 'rotate-45' : ''}`}
         size={24}
       />
     </button>
     {isOpen && (
-      <div className="p-6 pt-2">
+      <div className="p-4 md:p-6 pt-2">
         {children}
       </div>
     )}
@@ -40,39 +40,46 @@ const FAQSection = () => {
   const faqs = [
     {
       question: "Do I need to pay for SyncBook?",
-      answer: "SyncBook offers both free and premium plans. You can start with our free plan and upgrade anytime for additional features."
+      answer:
+        "SyncBook offers both free and premium plans. You can start with our free plan and upgrade anytime for additional features.",
     },
     {
       question: "Can I pay yearly instead of monthly?",
-      answer: "Yes! We offer annual billing with a discount compared to monthly billing. You can switch between billing periods at any time."
+      answer:
+        "Yes! We offer annual billing with a discount compared to monthly billing. You can switch between billing periods at any time.",
     },
     {
       question: "Do I need to pay extra for reminders?",
-      answer: "Basic reminders are included in all plans. Premium features like custom reminder schedules are available in paid plans."
+      answer:
+        "Basic reminders are included in all plans. Premium features like custom reminder schedules are available in paid plans.",
     },
     {
       question: "How much do I have to pay for additional text messages?",
-      answer: "Text message credits can be purchased separately. Pricing varies based on volume and your subscription plan."
+      answer:
+        "Text message credits can be purchased separately. Pricing varies based on volume and your subscription plan.",
     },
     {
       question: "Do I need a credit card to sign up?",
-      answer: "No credit card is required to sign up for our free plan. You'll only need to provide payment information when upgrading to a paid plan."
-    }
+      answer:
+        "No credit card is required to sign up for our free plan. You'll only need to provide payment information when upgrading to a paid plan.",
+    },
   ];
 
   return (
-    <div className="max-w-3xl mx-auto p-6">
-      <div className="flex justify-between items-center mb-8">
-        <h2 className="text-4xl font-black">FAQs</h2>
+    <div className="max-w-3xl mx-auto p-4 sm:p-6">
+      {/* Header with FAQs and Expand All */}
+      <div className="flex justify-between items-center mb-6 sm:mb-8">
+        <h2 className="text-2xl md:text-4xl font-black">FAQs</h2>
         <button
           onClick={toggleExpandAll}
-          className="bg-yellow-400 hover:bg-yellow-500 px-6 py-2 rounded-full font-medium flex items-center gap-2 transition-colors"
+          className="bg-yellow-400 hover:bg-yellow-500 px-4 py-2 rounded-full font-medium flex items-center gap-2 transition-colors text-sm md:text-base"
         >
-          Expand all
+          {expandAll ? "Collapse All" : "Expand All"}
           <Plus size={20} className={expandAll ? 'rotate-45' : ''} />
         </button>
       </div>
 
+      {/* FAQ Items */}
       <div>
         {faqs.map((faq, index) => (
           <FAQItem
@@ -81,14 +88,15 @@ const FAQSection = () => {
             isOpen={expandAll || openItem === index}
             onClick={() => handleItemClick(index)}
           >
-            <p className="text-gray-600">{faq.answer}</p>
+            <p className="text-sm md:text-base text-gray-600">{faq.answer}</p>
           </FAQItem>
         ))}
       </div>
 
-      <div className="mt-8 text-gray-600">
+      {/* Support Link */}
+      <div className="mt-6 sm:mt-8 text-gray-600 text-sm md:text-base text-center">
         Can't find the answer here?{' '}
-        <a href="/support" className="text-gray-500 hover:underline">
+        <a href="/support" className="text-blue-500 hover:underline">
           Check out our Support page
         </a>
       </div>
@@ -97,3 +105,4 @@ const FAQSection = () => {
 };
 
 export default FAQSection;
+
