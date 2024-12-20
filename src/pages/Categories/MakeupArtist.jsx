@@ -57,7 +57,7 @@ const MakeupArtist = () => {
 
       {/* Additional Sections 1 */}
       <div className="flex flex-col lg:flex-row items-center lg:justify-between mb-6 sm:mb-8 lg:mb-12 bg-gradient-to-r from-gray-100 to-gray-300 rounded-xl shadow-xl" id="transform">
-  <div className="text-left lg:w-1/2 p-2 sm:p-6">
+  <div className="text-left lg:w-1/2 p-4 sm:p-8">
     <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-800 mb-6 leading-snug text-shadow-md">
       Elevate Your Style
     </h2>
@@ -68,11 +68,11 @@ const MakeupArtist = () => {
       Experience a personalized touch with makeup designed to suit your unique features. We offer a range of services tailored to make you feel radiant and confident for any event.
     </p>
   </div>
-  <div className="lg:w-1/2 p-2 sm:p-4">
+  <div className="lg:w-1/2 p-4 sm:p-10">
     <img 
       src={image2} 
       alt="Transform Your Look"
-      className="w-full h-[250px] sm:h-[350px] lg:h-[400px] object-cover rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out"
+      className="w-[600px] h-[250px] sm:h-[350px] lg:h-[400px] object-cover rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out"
     />
   </div>
 </div>
@@ -95,13 +95,13 @@ const MakeupArtist = () => {
           <img 
             src={image3} 
             alt="Makeup Artist" 
-            className="w-full h-[250px] sm:h-[300px] lg:h-[400px] object-cover rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out"
+            className="w-[600px] h-[250px] sm:h-[300px] lg:h-[400px] object-cover rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300 ease-in-out"
           />
         </div>
       </div>
 
       {/* Additional Sections 3*/}
-      <div className="relative flex flex-col lg:flex-row items-center lg:justify-between mb-6 sm:mb-8 lg:mb-14 bg-gradient-to-r from-gray-100 to-white" id="our-story">
+      <div className="relative flex flex-col lg:flex-row items-center lg:justify-between mb-6 sm:mb-8 lg:mb-14 bg-gradient-to-r from-gray-100 to-gray-300 rounded-xl shadow-xl"  id="our-story">
         <div className="text-left lg:w-1/2 p-4 sm:p-6">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 leading-snug">
             Always Innovating, Always Improving
@@ -117,7 +117,7 @@ const MakeupArtist = () => {
           <img
             src={image4}
             alt="Innovative Beauty"
-            className="w-full h-[250px] sm:h-[350px] lg:h-[450px] object-cover rounded-2xl shadow-xl transform hover:scale-110 transition-transform duration-500 ease-in-out"
+            className="w-[600px] h-[250px] sm:h-[350px] lg:h-[400px] object-cover rounded-2xl shadow-xl transform hover:scale-110 transition-transform duration-500 ease-in-out"
           />
         </div>
       </div>
@@ -127,7 +127,7 @@ const MakeupArtist = () => {
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-800 mb-10 text-center">What Our Clients Say</h2>
         <div className="flex justify-center items-center mb-4">
           <div className="flex flex-col items-center w-full sm:w-[600px] md:w-[750px] lg:w-[900px] mx-4"> 
-            <div className="bg-gradient-to-r from-gray-100 via-gray-200 to-gray-300 shadow-xl rounded-lg p-6 sm:p-10 mb-4 transition-all transform hover:scale-105 hover:shadow-2xl duration-300 ease-in-out overflow-hidden">
+            <div className="bg-gradient-to-b from-pink-100 via-pink-200 to-pink-300 shadow-xl rounded-lg p-6 sm:p-10 mb-4 transition-all transform hover:scale-105 hover:shadow-2xl duration-300 ease-in-out overflow-hidden">
               <blockquote className="italic text-base sm:text-lg lg:text-xl text-gray-700 mb-6">
                 "{testimonials[currentIndex].quote}"
               </blockquote>

@@ -28,57 +28,83 @@ const Hero = () => {
 </section>
 
       {/* Features Section */}
-      <section className="bg-white py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-8">
-  <h2 className="text-4xl font-extrabold text-center mb-10">
-    SyncBook got everything you need
-  </h2>
-  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-4 md:gap-6">
-    {/* Feature 1: Scheduling */}
-    <div className="group p-3 sm:p-4 md:p-6 bg-[#0c0c24] text-white rounded-lg transform hover:scale-105 hover:animate-bounceIn hover:animate-pulse transition-all duration-300">
-      <h3 className="text-pink-400 text-sm sm:text-base md:text-lg font-bold mb-2">🗓️ SCHEDULING</h3>
-      <p className="text-xs sm:text-sm md:text-base">Schedule appointments and control your calendar using our powerful platform.</p>
-    </div>
-    {/* Feature 2: Reminders */}
-    <div className="group p-3 sm:p-4 md:p-6 bg-[#0c0c24] text-white rounded-lg transform hover:scale-105 hover:animate-pulse hover:animate-bounceIn transition-all duration-300">
-      <h3 className="text-pink-400 text-sm sm:text-base md:text-lg font-bold mb-2">🔔 REMINDERS</h3>
-      <p className="text-xs sm:text-sm md:text-base">Reduce no-shows by sending appointment confirmation, reminder, and follow-up messages.</p>
-    </div>
-    {/* Feature 3: Online Booking */}
-    <div className="group p-3 sm:p-4 md:p-6 bg-[#0c0c24] text-white rounded-lg transform hover:scale-105 hover:animate-zoomIn hover:animate-bounceIn transition-all duration-300">
-      <h3 className="text-pink-400 text-sm sm:text-base md:text-lg font-bold mb-2">🌟 ONLINE BOOKING</h3>
-      <p className="text-xs sm:text-sm md:text-base">Enable your customers to easily book appointments based on your schedule.</p>
-    </div>
-    {/* Feature 4: Payments */}
-    <div className="group p-3 sm:p-4 md:p-6 bg-[#0c0c24] text-white rounded-lg transform hover:scale-105 hover:animate-bounceIn hover:animate-zoomIn transition-all duration-300">
-      <h3 className="text-pink-400 text-sm sm:text-base md:text-lg font-bold mb-2">💳 PAYMENTS</h3>
-      <p className="text-xs sm:text-sm md:text-base">Take deposits at booking and offer a seamless checkout experience.</p>
-    </div>
-    {/* Feature 5: Services */}
-    <div className="group p-3 sm:p-4 md:p-6 bg-[#0c0c24] text-white rounded-lg transform hover:scale-105 hover:animate-zoomIn hover:animate-bounceIn transition-all duration-300">
-      <h3 className="text-pink-400 text-sm sm:text-base md:text-lg font-bold mb-2">🛠️ SERVICES</h3>
-      <p className="text-xs sm:text-sm md:text-base">Manage your list of service offerings and prices to keep your customers up to date.</p>
-    </div>
-    {/* Feature 6: Client Management */}
-    <div className="group p-3 sm:p-4 md:p-6 bg-[#0c0c24] text-white rounded-lg transform hover:scale-105 hover:animate-fadeUp hover:animate-pulse transition-all duration-300">
-      <h3 className="text-pink-400 text-sm sm:text-base md:text-lg font-bold mb-2">👥 CLIENT MANAGEMENT</h3>
-      <p className="text-xs sm:text-sm md:text-base">Stay organized and communicate with all your clients in one place.</p>
-    </div>
-    {/* Feature 7: Marketing */}
-    <div className="group p-3 sm:p-4 md:p-6 bg-[#0c0c24] text-white rounded-lg transform hover:scale-105 hover:animate-bounceIn hover:animate-zoomIn transition-all duration-300">
-      <h3 className="text-pink-400 text-sm sm:text-base md:text-lg font-bold mb-2">📣 MARKETING</h3>
-      <p className="text-xs sm:text-sm md:text-base">Grow your business by sending mass messages like promotions and rebooking reminders.</p>
-    </div>
-    {/* Feature 8: Reports */}
-    <div className="group p-3 sm:p-4 md:p-6 bg-[#0c0c24] text-white rounded-lg transform hover:scale-105 hover:animate-bounceIn hover:animate-zoomIn transition-all duration-300">
-      <h3 className="text-pink-400 text-sm sm:text-base md:text-lg font-bold mb-2">📊 REPORTS</h3>
-      <p className="text-xs sm:text-sm md:text-base">Review your business performance to simplify taxes and identify new ways to grow.</p>
+      <section className="relative bg-gradient-to-r from-gray-50 via-gray-100 to-gray-200 py-16 overflow-hidden">
+  {/* Decorative Wave */}
+  <div className="absolute top-0 left-0 right-0 z-0">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#e5e7eb" fillOpacity="1" d="M0,256L60,234.7C120,213,240,171,360,160.7C480,150,600,160,720,181.3C840,203,960,213,1080,202.7C1200,192,1320,160,1380,144L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+    </svg>
+  </div>
+
+  <div className="max-w-7xl mx-auto px-6 relative z-10">
+    <h2 className="text-4xl font-bold text-center text-gray-900 mb-12 tracking-wider transform transition-all duration-500 hover:scale-105">
+      Key Features
+    </h2>
+
+    {/* Horizontal Layout with Flex */}
+    <div className="flex flex-wrap justify-center gap-8">
+      {/* Feature 1 */}
+      <div className="w-full sm:w-1/2 md:w-1/4 text-center px-6 mb-6 transform transition-all duration-500 hover:scale-105 hover:shadow-xl">
+        <div className="bg-gradient-to-r from-pink-500 to-purple-400 text-white w-16 h-16 flex items-center justify-center rounded-full shadow-lg mb-6 mx-auto">
+          <span className="text-2xl font-bold">1</span>
+        </div>
+        <h3 className="text-xl font-semibold text-gray-900 mb-2">💆‍♀️ Relaxing Treatments</h3>
+        <p className="text-sm text-gray-700">Indulge in luxurious facials, massages, and beauty treatments designed to refresh and rejuvenate.</p>
+      </div>
+
+      {/* Feature 2 */}
+      <div className="w-full sm:w-1/2 md:w-1/4 text-center px-6 mb-6 transform transition-all duration-500 hover:scale-105 hover:shadow-xl">
+        <div className="bg-gradient-to-r from-teal-500 to-cyan-400 text-white w-16 h-16 flex items-center justify-center rounded-full shadow-lg mb-6 mx-auto">
+          <span className="text-2xl font-bold">2</span>
+        </div>
+        <h3 className="text-xl font-semibold text-gray-900 mb-2">🌸 Premium Products</h3>
+        <p className="text-sm text-gray-700">We use only high-quality skincare and haircare products to ensure the best results for our clients.</p>
+      </div>
+
+      {/* Feature 3 */}
+      <div className="w-full sm:w-1/2 md:w-1/4 text-center px-6 mb-6 transform transition-all duration-500 hover:scale-105 hover:shadow-xl">
+        <div className="bg-gradient-to-r from-pink-400 to-yellow-500 text-white w-16 h-16 flex items-center justify-center rounded-full shadow-lg mb-6 mx-auto">
+          <span className="text-2xl font-bold">3</span>
+        </div>
+        <h3 className="text-xl font-semibold text-gray-900 mb-2">💅 Nail Services</h3>
+        <p className="text-sm text-gray-700">Experience flawless manicures and pedicures, customized to your personal style and preferences.</p>
+      </div>
+
+      {/* Feature 4 */}
+      <div className="w-full sm:w-1/2 md:w-1/4 text-center px-6 mb-6 transform transition-all duration-500 hover:scale-105 hover:shadow-xl">
+        <div className="bg-gradient-to-r from-violet-600 to-indigo-500 text-white w-16 h-16 flex items-center justify-center rounded-full shadow-lg mb-6 mx-auto">
+          <span className="text-2xl font-bold">4</span>
+        </div>
+        <h3 className="text-xl font-semibold text-gray-900 mb-2">🌿 Organic Options</h3>
+        <p className="text-sm text-gray-700">We offer a range of organic beauty treatments using natural ingredients for sensitive skin types.</p>
+      </div>
+
+      {/* Feature 5 */}
+      <div className="w-full sm:w-1/2 md:w-1/4 text-center px-6 mb-6 transform transition-all duration-500 hover:scale-105 hover:shadow-xl">
+        <div className="bg-gradient-to-r from-orange-400 to-yellow-500 text-white w-16 h-16 flex items-center justify-center rounded-full shadow-lg mb-6 mx-auto">
+          <span className="text-2xl font-bold">5</span>
+        </div>
+        <h3 className="text-xl font-semibold text-gray-900 mb-2">🕒 Timely Appointments</h3>
+        <p className="text-sm text-gray-700">We value your time—book your services easily and enjoy prompt, on-time service from our team.</p>
+      </div>
+
+      {/* Feature 6 */}
+      <div className="w-full sm:w-1/2 md:w-1/4 text-center px-6 mb-6 transform transition-all duration-500 hover:scale-105 hover:shadow-xl">
+        <div className="bg-gradient-to-r from-teal-500 to-lime-400 text-white w-16 h-16 flex items-center justify-center rounded-full shadow-lg mb-6 mx-auto">
+          <span className="text-2xl font-bold">6</span>
+        </div>
+        <h3 className="text-xl font-semibold text-gray-900 mb-2">✨ Personalized Service</h3>
+        <p className="text-sm text-gray-700">Receive tailored beauty services to match your needs and preferences, from skincare to styling.</p>
+      </div>
     </div>
   </div>
 </section>
 
 
+
+
      {/* Testimonials Section */}
-<div className="mt-10">
+<div className="mt-16">
   <Testimonial />
 </div>
 
@@ -135,3 +161,5 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
