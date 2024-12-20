@@ -8,7 +8,6 @@ import {
   FaMobileAlt,
   FaGooglePlay,
   FaApple,
-  FaShareAlt
 } from "react-icons/fa";
 
 const Features = [
@@ -20,16 +19,7 @@ const Features = [
   { title: "Centralized communication", link: "/communication" },
   { title: "Services", link: "/services" },
   { title: "Marketing", link: "/marketing" },
-  { title: "Reserve with Google", link: "/google-reserve" }
-];
-
-const Customers = [
-  { title: "Hairstylists", link: "/hairstylists" },
-  { title: "Hair removal technicians", link: "/hair-removal" },
-  { title: "Lash artists", link: "/lash-artists" },
-  { title: "Makeup artists", link: "/makeup" },
-  { title: "Massage therapists", link: "/massage" },
-  { title: "Nail artists", link: "/nail-artists" }
+  { title: "Reserve with Google", link: "/google-reserve" },
 ];
 
 const GoldieLinks = [
@@ -38,27 +28,27 @@ const GoldieLinks = [
   { title: "Blog", link: "/blog" },
   { title: "Terms & conditions", link: "/terms" },
   { title: "Privacy policy", link: "/privacy" },
-  { title: "About Us", link: "/aboutus" }
+  { title: "About Us", link: "/aboutus" },
 ];
 
 const Support = [
   { title: "Help center", link: "/help" },
-  { title: "Getting started", link: "/#" }
+  { title: "Getting started", link: "/#" },
 ];
 
 const Footer = () => {
   return (
     <div className="bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white mt-14 rounded-t-3xl">
       <section className="container max-w-7xl mx-auto px-4">
-        <div className="grid md:grid-cols-5 py-12 gap-8">
-
-          {/* Company Details Section moved to top */}
-          <div className="py-8 px-4">
-            <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3 flex items-center gap-3 font-serif text-primary">
+        <div className="grid grid-cols-1 md:grid-cols-5 py-12 gap-8">
+          {/* Company Details Section */}
+          <div>
+            <h1 className="sm:text-3xl text-xl font-bold mb-3 font-serif text-primary">
               SyncBook
             </h1>
             <p className="text-sm mb-4">
-              Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, voluptate.
+              Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Possimus, voluptate.
             </p>
             <div className="flex items-center gap-3 mb-3">
               <FaLocationArrow className="text-lg text-primary" />
@@ -68,7 +58,6 @@ const Footer = () => {
               <FaMobileAlt className="text-lg text-primary" />
               <p>+91 123456789</p>
             </div>
-            {/* Social Handles */}
             <div className="flex items-center gap-4 mt-6">
               <a href="#" className="text-3xl hover:text-primary duration-300">
                 <FaInstagram />
@@ -97,20 +86,6 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
-
-          {/* Customers Column */}
-          <div>
-            <h2 className="text-xl font-bold mb-4">Customers</h2>
-            {Customers.map((item, index) => (
-              <Link
-                key={index}
-                to={item.link}
-                className="text-gray-300 hover:text-white hover:translate-x-1 duration-300 block"
-              >
-                {item.title}
-              </Link>
-            ))}
           </div>
 
           {/* Goldie Column */}
@@ -150,32 +125,28 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-
-            <div className="mt-8">
-              {/* Download on mobile */}
-              <h3 className="text-lg font-semibold mb-4">Download on mobile</h3>
-              {/* QR Code Link */}
-              <Link
-                to="/share"
-                className="text-gray-300 hover:text-white flex items-left justify-left gap-2 mb-4"
-              >
-                QR Code
-              </Link>
-
-              {/* Mobile Download Options below the QR Code */}
-              <div className="flex flex-col items-left">
-                <a href="#" className="flex items-center gap-2 text-gray-300 hover:text-white mb-2">
-                  <FaGooglePlay className="text-2xl" />
-                  <span>Google Play</span>
-                </a>
-                <a href="#" className="flex items-left gap-2 text-gray-300 hover:text-white">
-                  <FaApple className="text-2xl" />
-                  <span>App Store</span>
-                </a>
-              </div>
-            </div>
           </div>
 
+          {/* Download on Mobile Column */}
+          <div>
+            <h3 className="text-xl font-bold mb-4">Download on mobile</h3>
+            <Link
+              to="/share"
+              className="text-gray-300 hover:text-white flex items-left justify-left gap-2 mb-4"
+            >
+              QR Code
+            </Link>
+            <div className="flex flex-col items-left">
+              <a href="#" className="flex items-center gap-2 text-gray-300 hover:text-white mb-2">
+                <FaGooglePlay className="text-2xl" />
+                <span>Google Play</span>
+              </a>
+              <a href="#" className="flex items-center gap-2 text-gray-300 hover:text-white">
+                <FaApple className="text-2xl" />
+                <span>App Store</span>
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
