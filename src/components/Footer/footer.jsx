@@ -52,12 +52,13 @@ const Footer = () => {
               <FaMobileAlt className="text-lg text-primary" />
               <p>+91 123456789</p>
             </div>
-            <div>
-              <FaEnvelope className="text-lg text-primary" />
-                <p><a href="mailto:support@heygoldie.com" className="text-gray-300 hover:text-white">
-                  support@SyncBook.com
-                </a></p>
-            </div>
+            <div className="flex items-center gap-3">
+  <FaEnvelope className="text-lg text-primary" />
+  <a href="mailto:support@heygoldie.com" className="text-gray-300 hover:text-white">
+    support@SyncBook.com
+  </a>
+</div>
+
             <div className="flex items-center gap-4 mt-6">
               <a href="#" className="text-3xl hover:text-primary duration-300">
                 <FaInstagram />
