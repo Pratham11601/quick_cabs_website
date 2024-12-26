@@ -29,8 +29,8 @@ const MakeupArtist = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const location = useLocation()
   const category = location.state
-  console.log("category")
-  console.log(category)
+  // console.log("category")
+  // console.log(category)
   const testimonials = category.testimonials
   // Auto slide every 3 seconds
   useEffect(() => {

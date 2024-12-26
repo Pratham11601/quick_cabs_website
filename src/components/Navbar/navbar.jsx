@@ -177,7 +177,7 @@ export const Navlinks = [
     subMenu: [
       {
         name: "Astrology",
-        link: "/categories/makeup-artist",
+        link: "/categories/astrology",
         heroSection: {
           text: "Discover Your Destiny with Expert Astrology",
           img: "	https://i.pinimg.com/736x/23/28/03/232803c12ea29188f1dff35e334cf329.jpg", // Replace with actual image URL
@@ -218,7 +218,7 @@ export const Navlinks = [
       },
       {
         name: "Tarot card reader",
-        link: "/categories/makeup-artist",
+        link: "/categories/tarot-card-reader",
         heroSection: {
           text: "Find Clarity with Expert Tarot Card Readings",
           img: "https://i.pinimg.com/236x/9b/ef/b7/9befb7857dadd35d9ec95b9a97d0b949.jpg", // Replace with actual image URL
@@ -283,7 +283,7 @@ export const Navlinks = [
        },
       {
         name: "Beautician",
-        link: "/categories/makeup-artist",
+        link: "/categories/beautician",
         heroSection: {
           text: "Enhance Your Natural Beauty with Expert Care",
           img: "beautician_hero_image.jpg", // Replace with actual image URL
@@ -324,7 +324,7 @@ export const Navlinks = [
       },
       {
         name: "Mehendi artist",
-        link: "/categories/makeup-artist",
+        link: "/categories/mehendi-artist",
         heroSection: {
           text: "Celebrate Traditions with Beautiful Mehendi Designs",
           img: "mehendi_artist_hero_image.jpg", // Replace with actual image URL
@@ -365,7 +365,7 @@ export const Navlinks = [
       },
       {
         name: "Tattoo artist",
-        link: "/categories/makeup-artist",
+        link: "/categories/tattoo-artist",
         heroSection: {
           text: "Express Yourself with Stunning Tattoo Art",
           img: "tattoo_artist_hero_image.jpg",
@@ -406,7 +406,7 @@ export const Navlinks = [
       },
       {
         name: "Hair salons",
-        link: "/categories/makeup-artist",
+        link: "/categories/hair-salons",
         heroSection: {
           text: "Transform Your Look with Expert Hair Care",
           img: "hair_salon_hero_image.jpg",

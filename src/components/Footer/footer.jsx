@@ -10,16 +10,27 @@ import {
   FaGooglePlay,
   FaApple,
 } from "react-icons/fa";
+import { Navlinks } from "../Navbar/navbar";
+// const Features = [
+//   { title: "Astrology", link: "/categories/astrology" },
+//   { title: "Tarot card reader", link: "/categories/tarot-card-reader" },
+//   { title: "Beautician", link: "/categories/beautician" },
+//   { title: "Makeup artist", link: "/categories/makeup-artist" },
+//   { title: "Mehendi artist", link: "/categories/mehendi-artist" },
+//   { title: "Tattoo artist", link: "/categories/tattoo-artist" },
+//   { title: "Hair salons", link: "/categories/hair-salons" },
+// ];
 
-const Features = [
-  { title: "Astrology", link: "/categories/astrology" },
-  { title: "Tarot card reader", link: "/categories/tarot-card-reader" },
-  { title: "Beautician", link: "/categories/beautician" },
-  { title: "Makeup artist", link: "/categories/makeup-artist" },
-  { title: "Mehendi artist", link: "/categories/mehendi-artist" },
-  { title: "Tattoo artist", link: "/categories/tattoo-artist" },
-  { title: "Hair salons", link: "/categories/hair-salons" },
-];
+const names = Navlinks.filter((item)=>{
+  if(item.name =="CATEGORIES"){
+    return item.subMenu
+  }
+})
+
+console.log("footer names")
+const Features = names[0].subMenu
+console.log(Features)
+
 
 const GoldieLinks = [
   { title: "Home" , link: "/",},
@@ -81,8 +92,9 @@ const Footer = () => {
                   <Link
                     to={item.link}
                     className="text-gray-300 hover:text-white hover:translate-x-1 duration-300 block"
+                    state={item}
                   >
-                    {item.title}
+                    {item.name}
                   </Link>
                 </li>
               ))}

@@ -129,6 +129,13 @@ const App = () => {
 
 
           <Route path="/categories/makeup-artist" element={<MakeupArtist />} />
+          <Route path="/categories/astrology" element={<MakeupArtist />} />
+          <Route path="/categories/astrology" element={<MakeupArtist />} />
+          <Route path="/categories/tarot-card-reader" element={<MakeupArtist />} />
+          <Route path="/categories/beautician" element={<MakeupArtist />} />
+          <Route path="/categories/mehendi-artist" element={<MakeupArtist />} />
+          <Route path="/categories/tattoo-artist" element={<MakeupArtist />} />
+          <Route path="/categories/hair-salons" element={<MakeupArtist />} />
 
 
           {/* Default Route */}
