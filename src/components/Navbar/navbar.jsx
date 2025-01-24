@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate from React Router
+import { useNavigate } from "react-router-dom"; 
+import logo from '../../assets/Quick_cab_logo.png';
 
 const Navbar = () => {
   const [isBlogActive, setIsBlogActive] = useState(false);
@@ -29,7 +30,7 @@ const Navbar = () => {
       <nav className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a
+          {/* <a
             href="/"
             onClick={handleLogoClick}
             className="flex items-center space-x-2"
@@ -37,7 +38,23 @@ const Navbar = () => {
             <span className="text-2xl font-extrabold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
               Quick Cabs
             </span>
-          </a>
+          </a> */}
+          {/* Logo */}
+          <a
+        href="/"
+        onClick={handleLogoClick}
+        className="flex items-center space-x-2"
+      >
+        <img
+          src={logo} // Using the imported logo here
+          alt="Quick Cabs Logo"
+          className="w-20 h-20 object-contain" // Adjust size as needed
+        />
+        {/* <span className="text-2xl font-extrabold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+          Quick Cabs
+        </span> */}
+      </a>
+
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -66,7 +83,7 @@ const Navbar = () => {
             ) : (
               <div className="flex items-center space-x-8">
                 <a
-                  href="/book-cab"
+                  href="/"
                   className="font-bold text-gray-700 hover:text-blue-500 transition-colors"
                 >
                   Book a Cab
