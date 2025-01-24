@@ -1,55 +1,3 @@
-// import React, { useEffect } from "react";
-// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";  
-// import AOS from "aos";
-// import "aos/dist/aos.css";
-
-// // Component imports
-// import Navbar from "./components/Navbar/navbar";
-// import Hero from "./pages/Hero/hero";
-// import Contact from "./pages/Contact/contact";
-// import ContactUs from "./pages/Contact/ContactUs";
-// import AboutUs from "./pages/About/AboutUs";
-// import Footer from "./components/Footer/footer";
-// import Services from "./pages/Services/services";
-// import MyAppointments from "./pages/Services/MyAppointments";
-// import BookAppointment from "./pages/Services/BookAppointment";
-
-// const App = () => {
-//   useEffect(() => {
-//     AOS.init({
-//       offset: 100,
-//       duration: 800,
-//       easing: "ease-in-sine",
-//       delay: 100,
-//     });
-//     AOS.refresh();
-//   }, []);
-
-//   return (
-//     <Router>
-//     <div className="bg-white text-black overflow-x-hidden">
-//     <Routes> 
-//           <Route path="/contactus" element={<ContactUs />} />
-//           <Route path="/aboutus" element={<AboutUs />} />
-//           <Route path="/services" element={<Services />} />
-//           <Route path="/book-appointment" element={<BookAppointment />} />
-//           <Route path="/my-appointments" element={<MyAppointments />} />
-//           <Route path="/" element={(
-//           <>
-//             <Navbar />
-//             <Hero />
-//             <Contact />
-//             {/* <ContactUs /> */}
-//             <Footer />
-//           </>
-//            )} /> 
-//       </Routes>
-//     </div>
-//     </Router>
-//   );
-// };
-
-// export default App;
 
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";  
@@ -58,21 +6,19 @@ import "aos/dist/aos.css";
 
 // Component imports
 import Navbar from "./components/Navbar/navbar";
-import Hero from "./pages/Hero/hero";
-import Contact from "./pages/Contact/contact";
-import ContactUs from "./pages/Contact/ContactUs";
+
 import AboutUs from "./pages/About/AboutUs";
 import Footer from "./components/Footer/footer";
-import Services from "./pages/Services/services";
-import ShareQRCode from "./pages/Contact/ShareQRCode";
-import IndustriesSection from "./pages/Industries/IndustriesSection";
-import MyAppointments from "./pages/Services/MyAppointments";
-import BookAppointment from "./pages/Services/BookAppointment";
-import PricingSection from "./pages/Pricing/PricingSection";
+
 import TermsConditions from './pages/TermsConditions'; 
 import PrivacyPolicy from './pages/PrivacyPolicy'; 
-import ServiceDetail from "./pages/Services/ServiseDetails";
-import MakeupArtist from "./pages/Categories/MakeupArtist"; 
+import Home from "./pages/Home/Home"; // Import Home component
+import Book from "./pages/CabBook/Book"; 
+import Offbeat from "./pages/Offbeat/Offbeat";
+import Travel from "./pages/Travel/Travel";
+import WebStories from "./pages/Webstories/WebStories";
+
+ 
 
 const App = () => {
   useEffect(() => {
@@ -93,49 +39,21 @@ const App = () => {
 
         <Routes>
           {/* Route for ContactUs page */}
-          <Route path="/contactus" element={<ContactUs />} />
+        
 
           {/* Route for AboutUs page */}
           <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/book-cab" element={<Book />} />
+        <Route path="/offbeat" element={<Offbeat />} />
+        <Route path="/travel-guides" element={<Travel />} />
+        <Route path="/web-stories" element={<WebStories />} />
 
-          {/* Route for Services page */}
-          <Route path="/services" element={<Services />} />
-          <Route path="/services/haircut" element={<ServiceDetail />} />
-          <Route path="/services/nails" element={<ServiceDetail />} />
-          <Route path="/services/massage" element={<ServiceDetail />} />
-          <Route path="/services/facial" element={<ServiceDetail />} />
-          <Route path="/services/spa" element={<ServiceDetail />} />
-          <Route path="/services/coloring" element={<ServiceDetail />} />
-          <Route path="/services/makeup" element={<ServiceDetail />} />
-          <Route path="/services/waxing" element={<ServiceDetail />} />
 
-           {/* Route for Share QR page */}
-           <Route path="/share" element={<ShareQRCode />} />
-
-             {/* Route for Share QR page */}
-             <Route path="/pricing" element={<PricingSection />} />
-
+           
              <Route path="/terms" element={<TermsConditions />} /> 
              <Route path="/privacy" element={<PrivacyPolicy />} />
 
- {/* Route for Share QR page */}
- <Route path="/industries" element={<IndustriesSection />} />
 
-          {/* Route for BookAppointment page */}
-          <Route path="/book-appointment" element={<BookAppointment />} />
-
-          {/* Route for MyAppointments page */}
-          <Route path="/my-appointments" element={<MyAppointments />} />
-
-
-          <Route path="/categories/makeup-artist" element={<MakeupArtist />} />
-          <Route path="/categories/astrology" element={<MakeupArtist />} />
-          <Route path="/categories/astrology" element={<MakeupArtist />} />
-          <Route path="/categories/tarot-card-reader" element={<MakeupArtist />} />
-          <Route path="/categories/beautician" element={<MakeupArtist />} />
-          <Route path="/categories/mehendi-artist" element={<MakeupArtist />} />
-          <Route path="/categories/tattoo-artist" element={<MakeupArtist />} />
-          <Route path="/categories/hair-salons" element={<MakeupArtist />} />
 
 
           {/* Default Route */}
@@ -143,8 +61,7 @@ const App = () => {
             path="/"
             element={
               <>
-                <Hero />
-                <Contact />
+                <Home /> 
                 {/* Footer is displayed on all pages */}
                 
               </>

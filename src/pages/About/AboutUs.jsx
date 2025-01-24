@@ -1,60 +1,7 @@
-// import React from 'react'
-// import { Twitter, Instagram, Linkedin, Facebook } from 'lucide-react'
-// function AboutUs() {
-//   return (
-    
-//     <div>
-   
-//     <section className="bg-[#1a1625] min-h-screen flex flex-col items-center justify-center text-center p-4">
-//     <h1 className="text-primary text-6xl font-bold mb-6">Keep in touch</h1>
-//     <p className="text-white text-xl mb-8">
-//       Download the app and start booking<br />
-//       for free with Gargi today
-//     </p>
-    
-    
-//     <div className="flex space-x-6">
-//         <a href="#" className="text-yellow-400 hover:text-yellow-300">
-//           <Twitter size={24} />
-//         </a>
-//         <a href="#" className="text-yellow-400 hover:text-yellow-300">
-//           <Instagram size={24} />
-//         </a>
-//         <a href="#" className="text-yellow-400 hover:text-yellow-300">
-//           <Linkedin size={24} />
-//         </a>
-//         <a href="#" className="text-yellow-400 hover:text-yellow-300">
-//           <Facebook size={24} />
-//         </a>
-//       </div>
-    
-//   </section>
-  
-//   </div>
-//   )
-// }
-
-// export default AboutUs
+// 
 import React from 'react';
-import { Twitter, Instagram, Linkedin, Facebook } from 'lucide-react';
 
-// Import required images
-import HRM from '../../assets/image6.jpg';
-import SyncBook from '../../assets/banner2.jpg';
-import ECommerce from '../../assets/banner3.jpg';
-import CRM from '../../assets/img3.jpg';
-import Analytics from '../../assets/img1.jpg';
-import POS from '../../assets/img7.jpg';
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
 
-const cardImages = [HRM, SyncBook, ECommerce, CRM, Analytics, POS];
-
-const responsive = {
-  desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
-  tablet: { breakpoint: { max: 1024, min: 464 }, items: 2 },
-  mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
-};
 
 function AboutUs() {
   return (
