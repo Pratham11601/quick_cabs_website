@@ -12,10 +12,11 @@ import Footer from "./components/Footer/footer";
 
 import TermsConditions from './pages/TermsConditions'; 
 import PrivacyPolicy from './pages/PrivacyPolicy'; 
-import Home from "./pages/Home/Home"; // Import Home component
+import Home from "./pages/Home/Home";  
 import Book from "./pages/CabBook/Book"; 
 import Offbeat from "./pages/Offbeat/Offbeat";
 import Travel from "./pages/Travel/Travel";
+import DestinationDetails from "./pages/Travel/DestinationDetails";
 import WebStories from "./pages/Webstories/WebStories";
 
  
@@ -42,11 +43,15 @@ const App = () => {
         
 
           {/* Route for AboutUs page */}
+          
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/book-cab" element={<Book />} />
         <Route path="/offbeat" element={<Offbeat />} />
         <Route path="/travel-guides" element={<Travel />} />
+        <Route path="/destination/:id" element={<DestinationDetails />} />
+
         <Route path="/web-stories" element={<WebStories />} />
+
 
 
            
@@ -62,6 +67,7 @@ const App = () => {
             element={
               <>
                 <Home /> 
+             
                 {/* Footer is displayed on all pages */}
                 
               </>
