@@ -1,27 +1,4 @@
-// import React from "react";
 
-// const Book = ({ title }) => {
-//   return (
-//     <div className="text-lg font-medium text-gray-800">
-//       {title}
-//     </div>
-//   );
-// };
-
-// export default Book;
-// import React from "react";
-
-// const Book = ({ title }) => {
-//   return (
-//     <div className="w-full p-4 bg-gray-100 rounded-md shadow-md mt-8 z-50">
-//       <p className="text-lg font-medium text-gray-800">
-//         {title}: This is a fascinating book that will captivate your imagination.
-//       </p>
-//     </div>
-//   );
-// };
-
-// export default Book;
 import React from "react";
 
 const Book = ({ title }) => {

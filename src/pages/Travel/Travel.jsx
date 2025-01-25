@@ -49,13 +49,20 @@ const Travel = () => {
            {/* About Section */}
           <section className="p-8 border-t">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">About Quick Cabs Services</h2>
-            <p className="text-gray-700 leading-relaxed">
-              Quick Cabs Services is a trusted name in chauffeur-driven car rentals. Since our establishment in 2010, we have 
-              been dedicated to providing safe, affordable, and reliable cab services. With operations in over 1500 cities 
-              across the country, we pride ourselves on being one of India’s most extensive and accessible car rental networks. 
-              Our services include Outstation Oneway trips, Roundtrips, Hourly Rentals, and Airport Transfers, tailored to meet 
-              your travel needs efficiently and comfortably.
+            <p className="text-gray-700 leading-relaxed ">
+            Quick Cab trusted name in the tour and travel industry last 15 years operating in Maharashtra and All over India.
+
             </p>
+            <p className="text-gray-700 leading-relaxed mt-4">
+            We are offer affordable tour Packages for everyone to enjoy bagful of cheerful moments & unforgettable experience. we focused our priority on Customer satisfaction.
+            </p>
+            <p className="text-gray-700 leading-relaxed mt-4">
+            Quick cab is well known for its prompt, reliable, economical services. We also provide one way drop, round trip, outstation trip and full day package. We also arrange one way, return trip, family trip and whole day tour package for local sightseeing.
+            </p>
+            <p className="text-gray-700 leading-relaxed mt-4">
+            For making reservation or booking you have to simply call our call center at +919307074457 or write to us Now get best deals from our online car rental portal at affordable rates. Our car rent service can easily pick you from area around our native city, Hotels in city, from your home to your dream destination or picnic spots. We guarantee you to offer economical package for your trip, which will have no match in the industry.
+            </p>
+            
           </section>
 
             {/* More Travel Topics Section */}
@@ -103,7 +110,7 @@ const Travel = () => {
             </section>
 
             {/* Destination Details Modal */}
-            {selectedDestination && (
+            {/* {selectedDestination && (
               <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 transition-opacity duration-300 opacity-100">
                 <div className="bg-gradient-to-r from-purple-500 to-indigo-600 rounded-2xl max-w-2xl w-full shadow-xl overflow-y-auto max-h-[90vh] relative transform transition-transform duration-500 ease-in-out">
                   <div className="relative">
@@ -142,10 +149,10 @@ const Travel = () => {
                           <li><strong>Travel Tips:</strong> {selectedDestination.details.travelTips}</li>
                         </ul>
                       </div>
-                    </div>
+                    </div> */}
 
                     {/* Subplaces Section */}
-                    {selectedDestination.details.subPlaces && (
+                    {/* {selectedDestination.details.subPlaces && (
                       <div className="mt-8">
                         <h3 className="text-2xl font-semibold text-gray-800 mb-4">Subplaces</h3>
                         <div className="grid md:grid-cols-2 gap-6">
@@ -169,7 +176,7 @@ const Travel = () => {
                   </div>
                 </div>
               </div>
-            )}
+            )} */}
 
             {/* Conclusion */}
             <section className="text-center bg-blue-50 rounded-xl p-8">
@@ -180,9 +187,11 @@ const Travel = () => {
                 Travel is more than just moving from one place to another. It's about experiencing new cultures,
                 creating memories, and expanding your perspective of the world.
               </p>
-              <button className="bg-blue-500 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-600 transition">
-                Start Exploring
-              </button>
+              <Link to="/">
+                              <button className="bg-blue-500 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-600 transition">
+                                Start Exploring
+                              </button>
+                            </Link>
             </section>
           </div>
         </div>
