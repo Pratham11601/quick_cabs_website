@@ -6,10 +6,8 @@ import "aos/dist/aos.css";
 
 // Component imports
 import Navbar from "./components/Navbar/navbar";
-
 import AboutUs from "./pages/About/AboutUs";
 import Footer from "./components/Footer/footer";
-
 import TermsConditions from './pages/TermsConditions'; 
 import PrivacyPolicy from './pages/PrivacyPolicy'; 
 import Home from "./pages/Home/Home";  
@@ -35,41 +33,27 @@ const App = () => {
   return (
     <Router>
       <div className="bg-white text-black overflow-x-hidden">
-        {/* Navbar is displayed on all pages */}
         <Navbar />
 
         <Routes>
-          {/* Route for ContactUs page */}
-        
-
-          {/* Route for AboutUs page */}
-          
+         
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/book-cab" element={<Book />} />
-        <Route path="/offbeat" element={<Offbeat />} />
-        <Route path="/travel-guides" element={<Travel />} />
-        <Route path="/destination/:id" element={<DestinationDetails />} />
-
-        <Route path="/web-stories" element={<WebStories />} />
-
-
-
-           
-             <Route path="/terms" element={<TermsConditions />} /> 
-             <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/offbeat" element={<Offbeat />} />
+          <Route path="/travel-guides" element={<Travel />} />
+          <Route path="/destination/:id" element={<DestinationDetails />} />
+          <Route path="/web-stories" element={<WebStories />} />
+          <Route path="/terms" element={<TermsConditions />} /> 
+          <Route path="/privacy" element={<PrivacyPolicy />} />
 
 
-
-
-          {/* Default Route */}
+         {/* Default Route */}
           <Route
             path="/"
             element={
               <>
                 <Home /> 
-             
-                {/* Footer is displayed on all pages */}
-                
+                            
               </>
             }
           />
