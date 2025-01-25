@@ -187,9 +187,11 @@ const Travel = () => {
                 Travel is more than just moving from one place to another. It's about experiencing new cultures,
                 creating memories, and expanding your perspective of the world.
               </p>
-              <button className="bg-blue-500 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-600 transition">
-                Start Exploring
-              </button>
+              <Link to="/">
+                              <button className="bg-blue-500 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-600 transition">
+                                Start Exploring
+                              </button>
+                            </Link>
             </section>
           </div>
         </div>
