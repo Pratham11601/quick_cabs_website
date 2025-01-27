@@ -82,8 +82,9 @@ import React from 'react';
 
 const TermsConditions = () => {
   return (
-    <div className="bg-gray-50 text-gray-900 py-16 px-6 mt-8 sm:px-8 lg:px-16">
-      <div className="max-w-5xl mx-auto shadow-lg bg-white rounded-lg">
+    // <div className="bg-gray-50 text-gray-900 py-16 px-6 mt-8 sm:px-8 lg:px-16">
+      // <div className="max-w-5xl mx-auto shadow-lg bg-white rounded-lg">
+      <div className="bg-white shadow-2xl rounded-2xl overflow-hidden mt-4 min-h-screen py-12 z-50 w-full">
         <div className="bg-gradient-to-r from-orange-400 to-yellow-600 text-white py-6 px-6 rounded-t-lg text-center">
           <h1 className="text-4xl font-bold">Terms and Conditions</h1>
         </div>
@@ -128,7 +129,7 @@ const TermsConditions = () => {
           
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 

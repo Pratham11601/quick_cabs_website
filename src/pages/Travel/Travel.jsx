@@ -6,9 +6,10 @@ const Travel = () => {
   const [selectedDestination, setSelectedDestination] = useState(null);
 
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-white mt-10 min-h-screen py-12 z-50 w-full">
-      <div className="container mx-auto px-4">
-        <div className="bg-white shadow-2xl rounded-2xl overflow-hidden">
+    // <div className="bg-gradient-to-b from-blue-50 to-white mt-10 min-h-screen py-12 z-50 w-full">
+    //   <div className="container mx-auto px-4">
+    <div className="bg-white shadow-2xl rounded-2xl overflow-hidden mt-10 min-h-screen py-12 z-50 w-full">
+        {/* <div className="bg-white shadow-2xl rounded-2xl overflow-hidden"> */}
            {/* Search Section */}
            <section className="p-8">
             <h2 className="text-2xl font-bold text-gray-800 mb-4">Search for Travel Content</h2>
@@ -195,8 +196,8 @@ const Travel = () => {
             </section>
           </div>
         </div>
-      </div>
-    </div>
+      // </div>
+    // </div>
   );
 };
 
