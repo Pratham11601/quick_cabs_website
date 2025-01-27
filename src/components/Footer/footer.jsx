@@ -188,7 +188,7 @@ import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="bg-gradient-to-r from-indigo-700 via-indigo-900 to-black text-white mt-14 rounded-t-3xl">
+    <div className="bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 text-white mt-14 rounded-t-3xl">
       <section className="container max-w-7xl mx-auto px-28 py-12">
         <div className="flex flex-wrap justify-between space-y-6 lg:space-y-0">
           {/* About Section */}
@@ -220,7 +220,6 @@ const Footer = () => {
               <li><a href="/outstation-taxi" className="hover:text-gray-200 transition duration-300 ease-in-out">Outstation Taxi</a></li>
               <li><a href="/one-way-cabs" className="hover:text-gray-200 transition duration-300 ease-in-out">One-way Cabs</a></li>
               <li><a href="/corporate-car-rental" className="hover:text-gray-200 transition duration-300 ease-in-out">Corporate Car Rental</a></li>
-              <li><a href="/airport-taxi" className="hover:text-gray-200 transition duration-300 ease-in-out">Airport Taxi</a></li>
               <li><a href="/tempo-travellers" className="hover:text-gray-200 transition duration-300 ease-in-out">Tempo Travellers</a></li>
             </ul>
           </div>
